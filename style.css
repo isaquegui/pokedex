@@ -1,0 +1,94 @@
+body {
+    margin: 0px;
+    background: linear-gradient(90deg, rgba(100, 159, 221, 1) 0%, rgba(88, 88, 209, 1) 45%, rgba(130, 230, 250, 1) 100%);
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+.title-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    padding: 5px;
+    font-size: 65px;
+    color: #ffcc01;
+    text-shadow: rgb(43, 110, 182) 3px 0px 0px, rgb(43, 110, 182) 2.83487px 0.981584px 0px, rgb(43, 110, 182) 2.35766px 1.85511px 0px, rgb(43, 110, 182) 1.62091px 2.52441px 0px, rgb(43, 110, 182) 0.705713px 2.91581px 0px, rgb(43, 110, 182) -0.287171px 2.98622px 0px, rgb(43, 110, 182) -1.24844px 2.72789px 0px, rgb(43, 110, 182) -2.07227px 2.16926px 0px, rgb(43, 110, 182) -2.66798px 1.37182px 0px, rgb(43, 110, 182) -2.96998px 0.42336px 0px, rgb(43, 110, 182) -2.94502px -0.571704px 0px, rgb(43, 110, 182) -2.59586px -1.50383px 0px, rgb(43, 110, 182) -1.96093px -2.27041px 0px, rgb(43, 110, 182) -1.11013px -2.78704px 0px, rgb(43, 110, 182) -0.137119px -2.99686px 0px, rgb(43, 110, 182) 0.850987px -2.87677px 0px, rgb(43, 110, 182) 1.74541px -2.43999px 0px, rgb(43, 110, 182) 2.44769px -1.73459px 0px, rgb(43, 110, 182) 2.88051px -0.838247px 0px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    padding: 25px;
+}
+
+.item p {
+    margin: 0;
+    text-align: center;
+    color: #ffcc01;
+    text-shadow: rgb(43, 110, 182) 3px 0px 0px, rgb(43, 110, 182) 2.83487px 0.981584px 0px, rgb(43, 110, 182) 2.35766px 1.85511px 0px, rgb(43, 110, 182) 1.62091px 2.52441px 0px, rgb(43, 110, 182) 0.705713px 2.91581px 0px, rgb(43, 110, 182) -0.287171px 2.98622px 0px, rgb(43, 110, 182) -1.24844px 2.72789px 0px, rgb(43, 110, 182) -2.07227px 2.16926px 0px, rgb(43, 110, 182) -2.66798px 1.37182px 0px, rgb(43, 110, 182) -2.96998px 0.42336px 0px, rgb(43, 110, 182) -2.94502px -0.571704px 0px, rgb(43, 110, 182) -2.59586px -1.50383px 0px, rgb(43, 110, 182) -1.96093px -2.27041px 0px, rgb(43, 110, 182) -1.11013px -2.78704px 0px, rgb(43, 110, 182) -0.137119px -2.99686px 0px, rgb(43, 110, 182) 0.850987px -2.87677px 0px, rgb(43, 110, 182) 1.74541px -2.43999px 0px, rgb(43, 110, 182) 2.44769px -1.73459px 0px, rgb(43, 110, 182) 2.88051px -0.838247px 0px;
+    font-size: 25px;
+    transition: all .2s ease-in-out;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    transition: all .2s ease-in-out;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.item:hover p {
+    transform: scale(1.2);
+}
+
+.flip-card {
+    cursor: pointer;
+    width: 350px;
+    height: 330px;
+    padding: 20px;
+    background-color: transparent;
+    perspective: 1000px;
+    margin: 10px;
+    background: linear-gradient(90deg, rgba(100, 159, 221, 1) 0%, rgba(88, 209, 104, 1) 49%, rgba(130, 230, 250, 1) 100%);
+    border-radius: 15px;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card.show-back .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back .content {
+    display: flex;
+    color: black;
+    font-family: sans-serif;
+}
