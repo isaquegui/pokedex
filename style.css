@@ -89,6 +89,7 @@ body {
 
 .flip-card-back .content {
     display: flex;
+    flex-direction: column;
     color: black;
     font-family: sans-serif;
 }
